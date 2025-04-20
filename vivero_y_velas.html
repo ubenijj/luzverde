@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Plantas y Velas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+  <header class="bg-green-700 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">🌿 Vivero Natural y Velas Aromáticas 🕯️</h1>
+    <p class="text-center">Venta de plantas, velas y naturaleza para tu hogar</p>
+  </header>
+
+  <main class="p-6 max-w-6xl mx-auto">
+    <!-- Navegación entre secciones -->
+    <nav class="text-center mb-6">
+      <button class="bg-green-700 text-white px-4 py-2 rounded-xl hover:bg-green-600 focus:outline-none transition" onclick="showSection('plantas')">Plantas</button>
+      <button class="bg-green-700 text-white px-4 py-2 rounded-xl hover:bg-green-600 focus:outline-none transition" onclick="showSection('velas')">Velas</button>
+    </nav>
+
+    <!-- Sección Plantas -->
+    <section id="plantas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Planta 1" class="w-full h-48 object-cover rounded-xl">
+        <h2 class="text-xl font-semibold mt-2">Monstera Deliciosa</h2>
+        <p class="text-green-700 font-bold text-lg">$35.000</p>
+        <p class="text-sm text-gray-600">Planta tropical de interior, fácil de cuidar.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="https://images.unsplash.com/photo-1611078489935-cde0b3bd8f0e" alt="Planta 2" class="w-full h-48 object-cover rounded-xl">
+        <h2 class="text-xl font-semibold mt-2">Suculenta</h2>
+        <p class="text-green-700 font-bold text-lg">$10.000</p>
+        <p class="text-sm text-gray-600">Ideal para espacios pequeños y decoración minimalista.</p>
+      </div>
+    </section>
+
+    <!-- Sección Velas -->
+    <section id="velas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 hidden mb-12">
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="https://images.unsplash.com/photo-1589990921197-c8cf828fa16d" alt="Vela 1" class="w-full h-48 object-cover rounded-xl">
+        <h2 class="text-xl font-semibold mt-2">Vela de Lavanda</h2>
+        <p class="text-green-700 font-bold text-lg">$15.000</p>
+        <p class="text-sm text-gray-600">Vela aromática de lavanda, perfecta para relajarte.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="https://images.unsplash.com/photo-1627369142569-d362b8ee970f" alt="Vela 2" class="w-full h-48 object-cover rounded-xl">
+        <h2 class="text-xl font-semibold mt-2">Vela de Eucalipto</h2>
+        <p class="text-green-700 font-bold text-lg">$12.000</p>
+        <p class="text-sm text-gray-600">Vela fresca y natural con aroma de eucalipto.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-10 bg-green-700 text-white p-6 text-center">
+    <p>¿Interesado en alguna planta o vela? ¡Contáctanos!</p>
+    <a href="https://wa.me/573195842790" target="_blank" class="inline-block mt-2 bg-white text-green-700 font-bold px-4 py-2 rounded-xl shadow hover:bg-green-100 transition">Hablar por WhatsApp</a>
+    <p class="mt-4 text-sm">&copy; 2025 Vivero Natural. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function showSection(section) {
+      const plantasSection = document.getElementById('plantas');
+      const velasSection = document.getElementById('velas');
+      if (section === 'plantas') {
+        plantasSection.classList.remove('hidden');
+        velasSection.classList.add('hidden');
+      } else {
+        plantasSection.classList.add('hidden');
+        velasSection.classList.remove('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>
